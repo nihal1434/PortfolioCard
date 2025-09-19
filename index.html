@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Bio Maker</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main>
+    <section class="intro">
+      <h1>
+        Turn <strong>your Simple Data</strong> into an iconic
+        <strong>Portfolio Card</strong>
+      </h1>
+      <span class="sub-text">Liven up your profile</span>
+      <p class="top-text">Powered by YourData</p>
+    </section>
+
+    <section class="form-section">
+      <h1>Portfolio Card Maker</h1>
+      <p>
+        Generate your personalized portfolio card in seconds. Share your
+        skills, links, and personality — all wrapped in a clean, professional design!
+      </p>
+      <form id="bioForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <textarea id="bio" placeholder="Short Bio"></textarea>
+        <input type="text" id="skills" placeholder="Skills (comma separated)" />
+        <input type="url" id="github" placeholder="GitHub URL" />
+        <input type="url" id="linkedin" placeholder="LinkedIn URL" />
+        <input type="file" id="photo" accept="image/*" />
+        <button type="submit">Generate</button>
+        <p class="fine-print">
+          We'll never share your information without permission
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <section class="preview hidden">
+    <div class="card" id="card">
+      <div class="card-content">
+        <img id="cardPhoto" src="https://via.placeholder.com/120" alt="Profile Photo" />
+        <div class="card-text">
+          <h2 id="cardName">Your Name</h2>
+          <p id="cardBio">Short bio will appear here.</p>
+          <p id="cardSkills"><strong>Skills:</strong> JavaScript, HTML, CSS</p>
+          <div class="links">
+            <a id="cardGithub" href="#" target="_blank">GitHub</a>
+            <a id="cardLinkedin" href="#" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <button id="downloadBtn">Download Card</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
