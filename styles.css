@@ -107,7 +107,7 @@ button:hover,button:focus{
     left: 0;
     right: 0;
     margin: auto;
-    max-width: 800px;
+    max-width: 50%;
 }
 .preview {
     position: fixed;
