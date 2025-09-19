@@ -1,7 +1,6 @@
 const form = document.getElementById("bioForm");
 const preview = document.querySelector(".preview");
-const mainContent = document.querySelector("main");
-
+const card = document.getElementById("card");
 const cardName = document.getElementById("cardName");
 const cardBio = document.getElementById("cardBio");
 const cardSkills = document.getElementById("cardSkills");
@@ -47,12 +46,20 @@ form.addEventListener("submit", (e) => {
   }
 
   preview.classList.remove("hidden");
-  mainContent.style.filter = "blur(5px)";
+  document.body.classList.add("blurred");
 });
 
 preview.addEventListener("click", (e) => {
   if (e.target === preview) {
     preview.classList.add("hidden");
-    mainContent.style.filter = "none";
   }
+});
+
+downloadBtn.addEventListener("click", () => {
+  html2canvas(card, { scale: 2 }).then((canvas) => {
+    const link = document.createElement("a");
+    link.download = "portfolio-card.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  });
 });
