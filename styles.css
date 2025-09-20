@@ -7,13 +7,12 @@ body {
     color: #2e2d2d;
     margin: 0;
     padding: 0;
-    width: 100vw;
 }
+
 .form-section,.intro{
     display: flex;
     flex-direction: column;
 }
-
 
 .intro{
         justify-content: space-between;
@@ -25,7 +24,7 @@ body {
         color: #ffffff;
         padding-bottom: 1.5em;
 }
-
+/* text css */
 .sub-text,
 .top-text {
     text-transform: uppercase;
@@ -41,21 +40,15 @@ body {
 }
 
 h1 {
-    margin: 1rem 0;
+    margin: .45em 0;
     font-size: 2.5rem;
     font-weight: 400;
     text-shadow: 0 1px  #816fca;
 }
-
-h2 {
-    font-size: 2rem;
-    margin: 0.167em 0;
-}
-
 p {
     margin-top: 0;
-    font-size: 1.25rem;
-    line-height: 1.5;
+    font-size: 1.2rem;
+    line-height: 1.35;
 }
 .fine-print {
     font-size: 0.75rem;
@@ -64,24 +57,26 @@ p {
     margin-bottom: 0;
     text-align: center;
 }
-
+/* form CSS */
 .form-section {
     max-width: 480px;
     width: 100%;
     text-align: center;
     margin: 0px auto;
-    padding: 0 2em ;
+    padding: 0 1em ;
 
 }
-
 input, textarea, button {
-    padding: 0.7em;
+    padding: 0.6em;
     margin-bottom: .35em;
     font-family: inherit;
     border: 2px solid #d1d5db;
     border-radius: 8px;
     font-size: 1rem;
     width: 100%; 
+}
+textarea{
+  margin-bottom: .2em;
 }
 input:focus,textarea:focus {
     outline: none;
@@ -96,11 +91,14 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+button:active{
+    background: #5a52d6;
+    transform: scale(0.98);    
 }
 
-button:hover,button:focus{
-  background: #5a52d6;
-}
+/* card section */
 
 .preview {
   position: fixed;
@@ -116,8 +114,6 @@ button:hover,button:focus{
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
-
-
 .card {
   width: 80%;
   max-width: 500px;
@@ -125,34 +121,21 @@ button:hover,button:focus{
   background: #c6baf7;
   padding: 1em;
   border-radius: 12px;
-  box-shadow: 4px 4px 5px rgba(0,0,0,0.1);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
    z-index: 1100;
-}
-#downloadBtn{
-    max-width: 450px;
-    margin-top: 50px;
-}
-.card h2 {
-  margin: 0.25em 0;
-}
-.links{
-    display: flex;
-    justify-content: space-around;
-}
-.links a {
-  margin: 0 0.5em;
-  color: #6c63ff;
-  text-decoration: none;
-}
-.links a:hover {
-  text-decoration: underline;
 }
 .card-content {
   display: flex;
   flex-direction: column;
-  gap: 1em;            
+  gap: .5em;            
 }
-
+.card-text h2{
+  font-size: 1.45rem;
+  margin: 0;
+}
+.card-text p{
+  margin: .5em 0;
+}
 .card img {
   width: 120px;
   height: 120px;
@@ -160,6 +143,25 @@ button:hover,button:focus{
   object-fit: cover;
   flex-shrink: 0;        /* prevents image from shrinking */
   border: 3px solid #6c63ff;
+  text-align: center;
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+}
+.links a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+.links a:hover {
+  text-decoration: underline;
+}
+
+#downloadBtn{
+    max-width: 425px;
+    display: block;
+    margin: 0 auto;
+    margin-top:.5em;
 }
 
 @media (min-width: 576px) {
@@ -170,12 +172,11 @@ button:hover,button:focus{
     h1 {
         font-size: 5vw;
     }
-    
-    h2 {
-        font-size: 2.625rem;
+    p{
+      font-size: 1.35rem;
     }
-    
-    .sub-text {
+  .sub-text,
+  .top-text {
         font-size: 1.25rem;
     }
     
@@ -185,22 +186,14 @@ button:hover,button:focus{
     .form-section{
         justify-content: center;
         padding-top: 0;
-
+    }
+    input, textarea, button{
+      font-size: 1.05rem;
     }
     .intro {
         min-height: 100vh;
     }
 }
-@media (max-width: 400px) {
-  .form-section {
-    padding: 0 1em;
-  }
-}
 .hidden {
   display: none;
-}
-.download-card {
-  width: 450px !important;
-  height: 300px !important;
-  height: auto;
 }
