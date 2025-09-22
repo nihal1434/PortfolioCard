@@ -48,7 +48,7 @@ Live demo: [https://portfoliocardgenerator.netlify.app/](https://portfoliocardge
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/portfolio-card-maker.git
+git clone https://github.com/nihal1434/PortfolioCard.git
 ```
 
 2. Folder Structure
