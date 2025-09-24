@@ -53,7 +53,7 @@ preview.addEventListener("click", (e) => {
   if (e.target === preview) {
     preview.classList.add("hidden");
   }
-});
+})
 
 downloadBtn.addEventListener("click", () => {
   html2canvas(card, { scale: 2 }).then((canvas) => {
@@ -61,5 +61,5 @@ downloadBtn.addEventListener("click", () => {
     link.download = "portfolio-card.png";
     link.href = canvas.toDataURL("image/png");
     link.click();
-  });
-});
+  })
+})
